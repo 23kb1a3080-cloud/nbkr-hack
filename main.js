@@ -50,20 +50,22 @@ function initParticleCanvas() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) { canvas.style.display="none"; return; }
   const ctx = canvas.getContext("2d");
   let W, H, particles, animId;
-  const MAX_DIST = 140;
-  const count = () => Math.min(Math.floor((W*H)/14000), 90);
+  const MAX_DIST = 130;
+  const count = () => Math.min(Math.floor((W*H)/18000), 60);
 
   function resize() {
     W = canvas.width  = canvas.offsetWidth;
     H = canvas.height = canvas.offsetHeight;
     particles = [];
     for (let i = 0; i < count(); i++) {
+      // warm hues: orange(28), amber(38), peach(18), gold(44)
+      const hues = [28, 38, 18, 44, 32];
       particles.push({
         x: Math.random()*W, y: Math.random()*H,
-        vx: (Math.random()-0.5)*0.45, vy: (Math.random()-0.5)*0.45,
-        r: 1.5+Math.random()*1.5,
-        hue: Math.random()<0.6?186:(Math.random()<0.5?270:210),
-        alpha: 0.4+Math.random()*0.5
+        vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3,
+        r: 1.2+Math.random()*1.8,
+        hue: hues[Math.floor(Math.random()*hues.length)],
+        alpha: 0.25+Math.random()*0.35
       });
     }
   }
@@ -75,16 +77,16 @@ function initParticleCanvas() {
         const dx=particles[i].x-particles[j].x, dy=particles[i].y-particles[j].y;
         const d=Math.sqrt(dx*dx+dy*dy);
         if (d<MAX_DIST) {
-          const op=(1-d/MAX_DIST)*0.3, h=(particles[i].hue+particles[j].hue)/2;
-          ctx.strokeStyle=`hsla(${h},100%,65%,${op})`; ctx.lineWidth=0.7;
+          const op=(1-d/MAX_DIST)*0.18, h=(particles[i].hue+particles[j].hue)/2;
+          ctx.strokeStyle=`hsla(${h},70%,58%,${op})`; ctx.lineWidth=0.8;
           ctx.beginPath(); ctx.moveTo(particles[i].x,particles[i].y); ctx.lineTo(particles[j].x,particles[j].y); ctx.stroke();
         }
       }
     }
     particles.forEach(p => {
       ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fillStyle=`hsla(${p.hue},100%,70%,${p.alpha})`;
-      ctx.shadowColor=`hsla(${p.hue},100%,65%,0.8)`; ctx.shadowBlur=6;
+      ctx.fillStyle=`hsla(${p.hue},75%,55%,${p.alpha})`;
+      ctx.shadowColor=`hsla(${p.hue},80%,50%,0.5)`; ctx.shadowBlur=8;
       ctx.fill(); ctx.shadowBlur=0;
       p.x+=p.vx; p.y+=p.vy;
       if(p.x<-10)p.x=W+10; if(p.x>W+10)p.x=-10;

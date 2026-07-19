@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | NBKR Hackathon 2026</title>
+  <meta name="description" content="Learn more about the NBKR Hackathon 2026 — eligibility, team sizes, schedule details, tracks, and what you get as a participant." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Premium Page Header styling specific to sub-pages */
+    .about-page-hero {
+      position: relative;
+      padding: 120px 0 60px;
+      background: var(--bg-alt);
+      border-bottom: 1px solid var(--border);
+      overflow: hidden;
+    }
+    .about-page-hero-title {
+      font-family: var(--ff-serif);
+      font-size: clamp(2.5rem, 6vw, 4.2rem);
+      font-weight: 800;
+      color: var(--text);
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .about-page-hero-sub {
+      font-family: var(--ff-head);
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: var(--text-m);
+      max-width: 600px;
+      line-height: 1.6;
+    }
+    .back-home-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--ff-mono);
+      font-size: 0.8rem;
+      color: var(--orange);
+      margin-bottom: 24px;
+      transition: transform var(--ease);
+    }
+    .back-home-link:hover {
+      transform: translateX(-4px);
+    }
+    .about-main-content {
+      padding: 80px 0;
+      position: relative;
+    }
+    .about-active-nav {
+      color: var(--orange) !important;
+      border-bottom: 2px solid var(--orange);
+      border-radius: 0 !important;
+      padding-bottom: 3px !important;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="NBKR Hackathon home">
+      <span class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="12" y="1" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <rect x="1" y="12" width="9" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="16.5" cy="16.5" r="3.5" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="10" y1="5.5" x2="12" y2="5.5" stroke="currentColor" stroke-width="1.5"/>
+          <line x1="5.5" y1="10" x2="5.5" y2="12" stroke="currentColor" stroke-width="1.5"/>
+        </svg>
+      </span>
+      <span class="logo-text">NBKR<span class="logo-accent">Hack</span></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="about.html" class="about-active-nav">About</a></li>
+      <li><a href="index.html#speakers">Speakers</a></li>
+      <li><a href="index.html#timeline">Timeline</a></li>
+      <li><a href="index.html#venue">Venue</a></li>
+      <li><a href="index.html#prizes">Prizes</a></li>
+      <li><a href="index.html#rules">Rules</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="#" class="nav-dashboard dash-trigger">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+        Dashboard
+      </a></li>
+      <li><a href="index.html#register" class="nav-cta reg-trigger" id="nav-register-btn">Register Now</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-mobile">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="nav-mobile" aria-hidden="true">
+    <ul role="list">
+      <li><a href="about.html" class="about-active-nav">About</a></li>
+      <li><a href="index.html#speakers">Speakers</a></li>
+      <li><a href="index.html#timeline">Timeline</a></li>
+      <li><a href="index.html#venue">Venue</a></li>
+      <li><a href="index.html#prizes">Prizes</a></li>
+      <li><a href="index.html#rules">Rules</a></li>
+      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="#" class="nav-dashboard dash-trigger">&#9783; Dashboard</a></li>
+      <li><a href="index.html#register" class="mobile-cta reg-trigger">Register Now</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- PAGE HERO -->
+<header class="about-page-hero">
+  <div class="hero-glow-orb hero-glow-orb-1" aria-hidden="true" style="top: -50px; left: 10%;"></div>
+  <div class="hero-glow-orb hero-glow-orb-2" aria-hidden="true" style="top: 20px; right: 15%;"></div>
+  <div class="container">
+    <a href="index.html" class="back-home-link">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M12 8H4M8 12L4 8L8 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back to Home
+    </a>
+    <h1 class="about-page-hero-title">About the <br><span class="gradient-text">NBKR Hackathon</span></h1>
+    <p class="about-page-hero-sub">Get all the details about our upcoming 24-hour non-stop on-campus building sprint.</p>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="about-main-content">
+  <div class="section-grid-bg" aria-hidden="true"></div>
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-copy">
+        <p class="about-lead">NBKR Hackathon is a <strong>24-hour offline hackathon</strong> open to students from NBKRIST and all other colleges &mdash; any branch, any year, any skill level. Every team participates. No eliminations before the event.</p>
+        <p>Organized by the <strong>Department of Artificial Intelligence &amp; Data Science</strong>, NBKRIST, this event challenges students to move from raw idea to working prototype in one focused sprint &mdash; guided by industry mentors, with all meals fully provided, and the energy of the whole campus behind you.</p>
+        <p>Form a team of 2&ndash;4. Build something real in 24 hours. Walk out with a prototype, a certificate, and a story worth telling.</p>
+        
+        <div class="quick-facts" style="margin-top: 40px;">
+          <div class="qf-item"><span class="qf-key">Eligibility</span><span class="qf-val">NBKRIST &amp; all colleges</span></div>
+          <div class="qf-item"><span class="qf-key">Team size</span><span class="qf-val">2 &ndash; 4 members</span></div>
+          <div class="qf-item"><span class="qf-key">Fee</span><span class="qf-val">Free</span></div>
+          <div class="qf-item"><span class="qf-key">Duration</span><span class="qf-val">24 hours (Offline)</span></div>
+          <div class="qf-item"><span class="qf-key">Venue</span><span class="qf-val">NBKRIST, Vidyanagar, A.P.</span></div>
+          <div class="qf-item"><span class="qf-key">Participation</span><span class="qf-val">Every registered team participates</span></div>
+          <div class="qf-item"><span class="qf-key">Food &amp; Drinks</span><span class="qf-val">Breakfast, lunch, dinner, tea, coffee &amp; snacks &mdash; all provided free</span></div>
+        </div>
+      </div>
+      
+      <div class="about-cards">
+        <div class="acard"><div class="acard-glow"></div><span class="acard-icon">&#9889;</span><span class="acard-num">24</span><span class="acard-unit">hours</span><span class="acard-desc">Non-stop on-campus building sprint</span></div>
+        <div class="acard"><div class="acard-glow"></div><span class="acard-icon">&#128101;</span><span class="acard-num">2&ndash;4</span><span class="acard-unit">members</span><span class="acard-desc">Open to all colleges, all branches</span></div>
+        <div class="acard"><div class="acard-glow"></div><span class="acard-icon">&#127942;</span><span class="acard-num">Top 3</span><span class="acard-unit">teams win</span><span class="acard-desc">Cash prizes, trophies &amp; premium swag</span></div>
+        <div class="acard acard-amber"><div class="acard-glow"></div><span class="acard-icon">&#127358;</span><span class="acard-num">Free</span><span class="acard-unit">entry &amp; meals</span><span class="acard-desc">Zero cost — food &amp; stays covered</span></div>
+      </div>
+    </div>
+    
+    <div class="tracks-wrap" style="margin-top: 60px;">
+      <h3 class="tracks-heading">Hack Tracks</h3>
+      <div class="tracks-row">
+        <div class="track-pill">&#129302; AI &amp; ML</div>
+        <div class="track-pill">&#127807; Sustainability &amp; GreenTech</div>
+        <div class="track-pill">&#127973; HealthTech</div>
+        <div class="track-pill">&#128179; FinTech</div>
+        <div class="track-pill">&#128640; Open Innovation</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="footer-glow" aria-hidden="true"></div>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a href="index.html" class="nav-logo footer-logo" aria-label="NBKR Hackathon home">
+        <span class="logo-mark"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="1" y="1" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="11" y="1" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><rect x="1" y="11" width="8" height="8" rx="1" stroke="currentColor" stroke-width="1.5"/><circle cx="15" cy="15" r="3" stroke="currentColor" stroke-width="1.5"/><line x1="9" y1="5" x2="11" y2="5" stroke="currentColor" stroke-width="1.5"/><line x1="5" y1="9" x2="5" y2="11" stroke="currentColor" stroke-width="1.5"/></svg></span>
+        <span class="logo-text">NBKR<span class="logo-accent">Hack</span></span>
+      </a>
+      <p class="footer-tagline">24-hour in-person hackathon &middot; Dept. of AI &amp; DS &middot; NBKRIST &middot; Sep 26&ndash;28, 2026</p>
+      <p class="footer-offline-note">&#9889; Offline only &mdash; in-person participation required</p>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="index.html#timeline">Timeline</a></li>
+        <li><a href="index.html#speakers">Speakers</a></li>
+        <li><a href="index.html#venue">Venue</a></li>
+        <li><a href="index.html#prizes">Prizes</a></li>
+        <li><a href="index.html#rules">Rules</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#register" class="reg-trigger">Register</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4 class="footer-col-title">Organized By</h4>
+      <address>
+        <p>Dept. of Artificial Intelligence &amp; Data Science (AI &amp; DS)</p>
+        <p>N.B.K.R. Institute of Science &amp; Technology (NBKRIST)</p>
+        <p>Vidyanagar, SPSR Nellore District</p>
+        <p>Andhra Pradesh &ndash; 524 413</p>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bar">
+    <div class="container">
+      <p>&copy; 2026 NBKR Hackathon &middot; Dept. of AI &amp; DS, NBKRIST &middot; All rights reserved</p>
+    </div>
+  </div>
+</footer>
+
+<!-- DASHBOARD OVERLAY -->
+<div class="dash-overlay" id="dash-overlay" role="dialog" aria-modal="true" aria-label="Dashboard" hidden>
+  <div class="dash-overlay-inner">
+    <div class="dash-overlay-bar">
+      <div class="dash-overlay-title">
+        <svg width="16" height="16" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="8" y="1" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="1" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+          <rect x="8" y="8" width="5" height="5" rx="1" stroke="currentColor" stroke-width="1.3"/>
+        </svg>
+        Event Dashboard
+      </div>
+      <button class="dash-overlay-close" id="dash-overlay-close" aria-label="Close dashboard">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+          <path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="dash-overlay-body">
+      <!-- Key Dates -->
+      <div class="dash-ov-section">
+        <div class="dash-ov-label">Key Dates</div>
+        <div class="dash-grid">
+          <div class="dash-card dash-card-cyan">
+            <div class="dash-card-icon">&#128197;</div>
+            <div class="dash-card-body">
+              <div class="dash-card-label">Registration Opens</div>
+              <div class="dash-card-value">15 Aug 2026</div>
+              <div class="dash-card-sub">Mark your calendar</div>
+            </div>
+          </div>
+          <div class="dash-card dash-card-amber">
+            <div class="dash-card-icon">&#9203;</div>
+            <div class="dash-card-body">
+              <div class="dash-card-label">Registration Closes</div>
+              <div class="dash-card-value">10 Sep 2026</div>
+              <div class="dash-card-sub">Don't miss the deadline</div>
+            </div>
+          </div>
+          <div class="dash-card dash-card-purple">
+            <div class="dash-card-icon">&#128640;</div>
+            <div class="dash-card-body">
+              <div class="dash-card-label">Hackathon Begins</div>
+              <div class="dash-card-value">26 Sep 2026</div>
+              <div class="dash-card-sub">10:15 AM on campus</div>
+            </div>
+          </div>
+          <div class="dash-card dash-card-green">
+            <div class="dash-card-icon">&#127942;</div>
+            <div class="dash-card-body">
+              <div class="dash-card-label">Winners Announced</div>
+              <div class="dash-card-value">28 Sep 2026</div>
+              <div class="dash-card-sub">1:00 PM valedictory</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="dash-ov-section">
+        <div class="dash-ov-label">Event Stats</div>
+        <div class="dash-stats">
+          <div class="dash-stat"><span class="dash-stat-val">24</span><span class="dash-stat-label">Hours</span></div>
+          <div class="dash-stat-sep"></div>
+          <div class="dash-stat"><span class="dash-stat-val">&#127873;</span><span class="dash-stat-label">Prizes &amp; Goodies</span></div>
+          <div class="dash-stat-sep"></div>
+          <div class="dash-stat"><span class="dash-stat-val">2&ndash;4</span><span class="dash-stat-label">Team Size</span></div>
+          <div class="dash-stat-sep"></div>
+          <div class="dash-stat"><span class="dash-stat-val">5</span><span class="dash-stat-label">Tracks</span></div>
+          <div class="dash-stat-sep"></div>
+          <div class="dash-stat"><span class="dash-stat-val">FREE</span><span class="dash-stat-label">Entry</span></div>
+          <div class="dash-stat-sep"></div>
+          <div class="dash-stat"><span class="dash-stat-val">&#127869;</span><span class="dash-stat-label">Food Free</span></div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="dash-ov-section">
+        <div class="dash-ov-label">Quick Links</div>
+        <div class="dash-links-grid">
+          <a href="index.html#register" class="dash-link reg-trigger dash-close-on-click">
+            <span class="dash-link-icon">&#128221;</span>
+            <span class="dash-link-text">Register Team</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="index.html#timeline" class="dash-link dash-close-on-click">
+            <span class="dash-link-icon">&#128336;</span>
+            <span class="dash-link-text">View Schedule</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="index.html#prizes" class="dash-link dash-close-on-click">
+            <span class="dash-link-icon">&#127942;</span>
+            <span class="dash-link-text">Prizes &amp; Swags</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="index.html#speakers" class="dash-link dash-close-on-click">
+            <span class="dash-link-icon">&#127908;</span>
+            <span class="dash-link-text">Meet Speakers</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="index.html#venue" class="dash-link dash-close-on-click">
+            <span class="dash-link-icon">&#128205;</span>
+            <span class="dash-link-text">Venue &amp; Logistics</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="index.html#rules" class="dash-link dash-close-on-click">
+            <span class="dash-link-icon">&#128221;</span>
+            <span class="dash-link-text">Rules &amp; Judging</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 7h8M8 4l3 3-3 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- REGISTRATION OVERLAY -->
+<div class="reg-overlay" id="reg-overlay" role="dialog" aria-modal="true" aria-label="Registration Form" hidden>
+  <div class="reg-overlay-inner">
+    <div class="reg-overlay-bar">
+      <div class="reg-overlay-title">
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><rect x="1" y="2" width="16" height="14" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M4 7h10M4 11h6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        NBKR Hackathon 2026 &mdash; Team Registration
+      </div>
+      <div class="reg-overlay-actions">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScAdVY04Pn-9XURkwwd5BDISbhxNnG5IjbM-xoYzpla0SFQkg/viewform" target="_blank" rel="noopener noreferrer" class="reg-overlay-newtab">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 12L12 2M12 2H5M12 2v7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          Open in new tab
+        </a>
+        <button class="reg-overlay-close" id="reg-overlay-close" aria-label="Close registration form">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M5 5l10 10M15 5L5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="reg-overlay-body">
+      <iframe id="reg-iframe" src="" data-src="https://docs.google.com/forms/d/e/1FAIpQLScAdVY04Pn-9XURkwwd5BDISbhxNnG5IjbM-xoYzpla0SFQkg/viewform?embedded=true" title="NBKR Hackathon 2026 Registration" frameborder="0" marginheight="0" marginwidth="0" class="reg-iframe" aria-label="Google registration form">Loading...</iframe>
+      <div class="reg-iframe-fallback">Form not loading? <a href="https://docs.google.com/forms/d/e/1FAIpQLScAdVY04Pn-9XURkwwd5BDISbhxNnG5IjbM-xoYzpla0SFQkg/viewform" target="_blank" rel="noopener noreferrer">Open directly in Google Forms &rarr;</a></div>
+    </div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+<script>
+  // Setup overlay click and esc triggers for sub-page
+  document.addEventListener("DOMContentLoaded", () => {
+    initDashOverlay();
+  });
+</script>
+</body>
+</html>
