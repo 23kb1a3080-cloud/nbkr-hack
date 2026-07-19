@@ -193,3 +193,50 @@ function initRegOverlay() {
   overlay.addEventListener("click",e=>{ if(e.target===overlay) close(); });
   document.addEventListener("keydown",e=>{ if(e.key==="Escape"&&isOpen) close(); });
 }
+
+/* ── Dashboard Overlay ───────────────────────────────────────── */
+function initDashOverlay() {
+  const overlay  = document.getElementById("dash-overlay");
+  const closeBtn = document.getElementById("dash-overlay-close");
+  if (!overlay || !closeBtn) return;
+
+  const triggers = document.querySelectorAll(".dash-trigger");
+  let isOpen = false;
+
+  function open(e) {
+    e.preventDefault();
+    if (isOpen) return;
+    isOpen = true;
+    overlay.hidden = false;
+    document.body.classList.add("overlay-open");
+    overlay.getBoundingClientRect();
+    overlay.classList.add("open");
+    closeBtn.focus();
+  }
+
+  function close() {
+    if (!isOpen) return;
+    isOpen = false;
+    overlay.classList.remove("open");
+    document.body.classList.remove("overlay-open");
+    const inner = overlay.querySelector(".dash-overlay-inner");
+    function onDone(ev) {
+      if (ev.target !== inner) return;
+      inner.removeEventListener("transitionend", onDone);
+      overlay.hidden = true;
+    }
+    inner.addEventListener("transitionend", onDone);
+  }
+
+  triggers.forEach(el => el.addEventListener("click", open));
+  closeBtn.addEventListener("click", close);
+  overlay.addEventListener("click", e => { if (e.target === overlay) close(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && isOpen) close(); });
+
+  // Close when clicking a quick link inside the overlay
+  overlay.querySelectorAll(".dash-close-on-click").forEach(el => {
+    el.addEventListener("click", () => setTimeout(close, 100));
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initDashOverlay);
